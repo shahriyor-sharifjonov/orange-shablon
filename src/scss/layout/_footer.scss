@@ -1,1 +1,18 @@
-// Футер
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    border-top: 1px solid var(--border-color);
+    background: #fff;
+    z-index: 50;
+    &__body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__p{
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

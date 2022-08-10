@@ -11,13 +11,14 @@ html(lang="en")
             include components/header 
             +header 
             main.main 
-                .intro
+                .intro#intro
                     .intro__body.container
                         .intro__img 
                             img(src="@img/intro-bg.webp", alt="" draggable="false")
-                .products 
-                    .products__body.container 
                         p.products__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quam magni error omnis aliquid beatae perspiciatis blanditiis aperiam quo. Placeat aspernatur tempora eligendi labore quos quia, ut corrupti expedita iusto nisi dolorum odit deleniti neque praesentium, nobis magnam voluptatibus nesciunt ullam ab nemo deserunt voluptas repellat voluptate provident! Quis inventore ex quasi quos consectetur animi commodi dolorum temporibus voluptatem nisi minus corporis dolor exercitationem ea hic sed.
+                .products#products
+                    .products__body.container 
+                        p.title Продукты 
                         .products__content 
                             a(href="#!").product 
                                 .product__img 
@@ -76,7 +77,40 @@ html(lang="en")
                                     p.product__span В 3 740 км
                                     p.product__span 19–24 авг.
                         p.products__desc Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui itaque similique beatae facilis recusandae neque natus repellendus culpa, quod vitae obcaecati suscipit nihil esse quisquam voluptatem facere libero voluptatum ipsum magnam incidunt. Quod perspiciatis corrupti accusantium debitis vel cumque molestias voluptas? Explicabo ipsa veritatis laborum quae sequi. Aut neque rem eum nemo amet dolorem esse nisi accusamus, natus ut sit voluptates, repellendus, voluptatum quaerat. Iusto quasi, consequatur illum reiciendis, aliquam doloribus cumque sint nostrum soluta dolore mollitia consequuntur quo praesentium, dolores at error odio nam. Id beatae magnam dolorum exercitationem quas numquam commodi mollitia consequuntur iure neque deleniti rerum, repellat nemo, corrupti accusamus et eum pariatur deserunt culpa aliquid aspernatur? Esse magnam exercitationem molestiae ipsam reiciendis itaque nisi consequuntur atque ullam, cupiditate cum reprehenderit illum obcaecati enim non sequi at quo repellendus quidem provident dolores assumenda? Minima vitae cumque praesentium voluptate, blanditiis velit nisi ad ullam, delectus eaque unde nobis quas non. Aliquid dolore deserunt neque, nemo ipsa iste veritatis autem? Tempore ratione velit dignissimos aperiam earum voluptatem ea voluptatibus laboriosam enim magni eos error ad expedita ex similique totam, sed nihil natus aut neque sunt a sit. Dolorem nulla quae earum quisquam voluptas, cupiditate voluptatum ratione est exercitationem deserunt quis et laboriosam amet quibusdam. Nisi aut quaerat repudiandae fugiat sint nemo perferendis delectus libero distinctio voluptate incidunt eveniet accusantium tempora totam, voluptatum ex nam quod repellat iste illum deleniti! Ratione ex voluptate laboriosam iure adipisci inventore delectus aliquam repudiandae sunt possimus! Obcaecati voluptate totam id maxime, ipsam debitis, aperiam qui explicabo magnam quasi recusandae? Error magni reprehenderit corporis, ab dolor fugit, fuga culpa omnis blanditiis libero quisquam quia eum odit quam quibusdam ea dolore exercitationem vel. Voluptate distinctio numquam aliquam atque rem ad aspernatur cum et animi quia veniam, est sint maxime quidem quibusdam at blanditiis laborum soluta aliquid quasi quaerat sunt nihil! Natus alias excepturi numquam, impedit deserunt cum nobis expedita molestiae sed harum ad illo corrupti laboriosam omnis sequi aliquam? A, totam! Debitis nam obcaecati quam quae officiis impedit iusto aperiam mollitia! Distinctio iste asperiores rem perferendis beatae labore. Cupiditate voluptatem, aliquam rerum eveniet pariatur dolores distinctio, nam molestiae maiores vero possimus a quidem dolorum facere optio quod repellendus soluta et, neque adipisci. Repudiandae excepturi labore in, illo deleniti nam eligendi, rem voluptas sunt a illum quasi cupiditate placeat obcaecati similique? Iste eos perferendis aliquid dignissimos impedit nihil, itaque, sed suscipit repellendus beatae quisquam tempore eligendi molestias.
-                    
+                .articles#articles
+                    .articles__body.container 
+                        p.title Статьи 
+                        .articles__swiper.swiper 
+                            .articles__wrapper.swiper-wrapper 
+                                .article.swiper-slide 
+                                    .article__img 
+                                        img(src="@img/product-1.webp", alt="" draggable="false")
+                                    .article__content
+                                        p.article__title Article title
+                                        p.article__p Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ut, cum commodi corporis rem necessitatibus consequuntur. Consequatur ad officia perspiciatis?
+                                        a(href="#!").article__link more...
+                                .article.swiper-slide 
+                                    .article__img 
+                                        img(src="@img/product-2.webp", alt="" draggable="false")
+                                    .article__content
+                                        p.article__title Article title
+                                        p.article__p Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ut, cum commodi corporis rem necessitatibus consequuntur. Consequatur ad officia perspiciatis?
+                                        a(href="#!").article__link more...
+                                .article.swiper-slide 
+                                    .article__img 
+                                        img(src="@img/product-3.webp", alt="" draggable="false")
+                                    .article__content
+                                        p.article__title Article title
+                                        p.article__p Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ut, cum commodi corporis rem necessitatibus consequuntur. Consequatur ad officia perspiciatis?
+                                        a(href="#!").article__link more...
+                                .article.swiper-slide 
+                                    .article__img 
+                                        img(src="@img/product-4.webp", alt="" draggable="false")
+                                    .article__content
+                                        p.article__title Article title
+                                        p.article__p Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ut, cum commodi corporis rem necessitatibus consequuntur. Consequatur ad officia perspiciatis?
+                                        a(href="#!").article__link more...
+                            .swiper-pagination
             include components/footer 
             +footer
         script(src="js/app.min.js")  
