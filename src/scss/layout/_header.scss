@@ -1,0 +1,116 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    border-bottom: 1px solid var(--border-color);
+    background: #fff;
+    z-index: 50;
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__menu{
+        @include media(992) {
+            position: fixed;
+            z-index: 60;
+            background: #fff;
+            box-shadow: 0 0 15px -7px #00000030;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms ease-out;
+            &.open{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &__list{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style-type: none;
+        gap: 30px;
+        @include media(992){
+            flex-direction: column;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        font-size: 16px;
+        transition: 300ms ease-out;
+        font-weight: 500;
+        @include media(992){
+            font-size: 20px;
+        }
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+    &__logo{
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+    &__button {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        border: none;
+        outline: none;
+        background: none;
+        display: none;
+        z-index: 70;
+        @include media($lg) {
+            display: block;
+        }
+        &.open {
+            .header__button-line,
+            &::before {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(135deg);
+            }
+            &::after {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-135deg);
+            }
+        }
+        &::before,
+        &::after,
+        &-line {
+            transition: 0.5s;
+            position: absolute;
+            content: "";
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        &::before {
+            top: 20%;
+        }
+        &::after {
+            bottom: 20%;
+        }
+        &-line {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
